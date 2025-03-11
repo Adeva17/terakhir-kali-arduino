@@ -10,7 +10,7 @@ This project brings the song **"Terakhir Kali"** by **Wijaya 80** to life using 
 - Passive Buzzer
 
 ## 📝 Wiring
-![Wiring](images/Annotation_2025-03-11_220040.png)
+![Wiring](images/Annotation 2025-03-11 220040.png)
 
 ## 🚀 Getting Started
 ### 1️⃣ Install the Arduino IDE
