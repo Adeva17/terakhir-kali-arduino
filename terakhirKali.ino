@@ -88,7 +88,7 @@
 #define NOTE_D8  4699
 #define NOTE_DS8 4978
 
-#define melodyPin 5
+#define melodyPin 13
 
 int melody[] = {
   NOTE_E4, NOTE_E4, NOTE_E4, NOTE_E4, NOTE_E4, NOTE_FS4, NOTE_G4, NOTE_A4,0,
@@ -123,8 +123,8 @@ int tempo[] = {
 
 void setup(void)
 {
-  pinMode(5, OUTPUT);//buzzer
-  pinMode(4, OUTPUT);//led 
+  pinMode(3, OUTPUT);//buzzer
+  pinMode(13, OUTPUT);//led 
 }
 
 void loop()
@@ -155,7 +155,7 @@ void loop()
 
 
 void buzz(int targetPin, long frequency, long length) {
-  digitalWrite(13, HIGH);
+  digitalWrite(3, HIGH);
   long delayValue = 1000000 / frequency / 2; // calculate the delay value between transitions
   //// 1 second's worth of microseconds, divided by the frequency, then split in half since
   //// there are two phases to each cycle
@@ -168,5 +168,5 @@ void buzz(int targetPin, long frequency, long length) {
     digitalWrite(targetPin, LOW); // write the buzzer pin low to pull back the diaphram
     delayMicroseconds(delayValue); // wait again or the calculated delay value
   }
-  digitalWrite(4, LOW);
+  digitalWrite(3, LOW);
 }
